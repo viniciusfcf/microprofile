@@ -1,5 +1,8 @@
 package com.github.viniciusfcf.microprofile;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+
 import io.opentracing.Span;
 import io.opentracing.Tracer;
 
@@ -9,19 +12,17 @@ import io.opentracing.Tracer;
  * Pode ser utilizado em métodos
  */
 //@Traced(operationName = "${package name}.${class name}.${method name}", value = true)
+@ApplicationScoped
 public class MinhaClasseServico {
 
-	
-	
+	@Inject
+	private Tracer tracer;
 	
 	public void fazAlgoPorAnotacao() {
 		
 	}
 	
-	@SuppressWarnings("null")
 	public void fazAlgoManualmente() {
-		// nos frameworks ou servidores  utilizar um @Inject na classe
-		Tracer tracer = null;
 		
 		//Exemplo de log se um evento/passo que ocorreu no método
 		tracer.activeSpan().log("eventSpanName");
@@ -35,7 +36,7 @@ public class MinhaClasseServico {
 		
 		//não precisa inicializar explicitamente o pai
 		Span parent = tracer.scopeManager().activeSpan();
-		Span spanFilho = tracer.buildSpan("SpanFilho1").withTag("", "").asChildOf(parent).start();
+		Span spanFilho = tracer.buildSpan("SpanFilho1").withTag("tagKey1", "tagValue1").asChildOf(parent).start();
 		//...
 		spanFilho.setOperationName("fazendoAlgo...");
 		//Deve ser a última chamada ao span

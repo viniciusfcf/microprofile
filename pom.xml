@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
-    <parent>
-        <groupId>org.jboss</groupId>
-        <artifactId>jboss-parent</artifactId>
-        <version>36</version>
-    </parent>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.github.viniciusfcf.microprofile</groupId>
-    <artifactId>viniciusfcf-microprofile-parent</artifactId>
-    <name>Microprofile - Parent pom</name>
-    <version>999-SNAPSHOT</version>
-    <packaging>pom</packaging>
+	<parent>
+		<groupId>org.jboss</groupId>
+		<artifactId>jboss-parent</artifactId>
+		<version>36</version>
+	</parent>
 
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.viniciusfcf.microprofile</groupId>
+	<artifactId>viniciusfcf-microprofile-parent</artifactId>
+	<name>Microprofile - Parent pom</name>
+	<version>999-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-    <scm>
-        <url>https://github.com/viniciusfcf/microprofile</url>
-    </scm>
-    
-    <properties>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/viniciusfcf/microprofile</url>
+	</scm>
+
+	<properties>
 		<compiler-plugin.version>3.8.1</compiler-plugin.version>
 		<maven.compiler.parameters>true</maven.compiler.parameters>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -42,19 +42,30 @@
 		<surefire-plugin.version>2.22.1</surefire-plugin.version>
 	</properties>
 
-    <modules>
-        <!-- External projects -->
-        <module>opentracing</module>
+	<modules>
+		<!-- External projects -->
+		<module>opentracing</module>
 
-    </modules>
+	</modules>
 
-    <repositories>
-        <repository>
-            <id>central</id>
-            <name>Maven Repository Switchboard</name>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-   </repositories>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<name>Maven Repository Switchboard</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+	</repositories>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.eclipse.microprofile</groupId>
+				<artifactId>microprofile</artifactId>
+				<version>3.2</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 </project>
