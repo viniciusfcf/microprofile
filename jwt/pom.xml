@@ -11,25 +11,19 @@
 		<version>999-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>viniciusfcf-opentracing</artifactId>
-	<name>Microprofile - OpenTracing</name>
+	<artifactId>viniciusfcf-jwt</artifactId>
+	<name>Microprofile - JWT Propagation</name>
 
 	<dependencies>
-
-		<!-- https://github.com/eclipse/microprofile-opentracing -->
 		<dependency>
-			<groupId>org.eclipse.microprofile.opentracing</groupId>
-			<artifactId>microprofile-opentracing-api</artifactId>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
 		</dependency>
-
-		<!-- Dependência para fazer tracing das queries -->
-		<!-- Configurações são dependentes do framework/servidor utilizado... -->
-		<!-- GIT: https://github.com/opentracing-contrib/java-jdbc -->
+		
 		<dependency>
-			<groupId>io.opentracing.contrib</groupId>
-			<artifactId>opentracing-jdbc</artifactId>
-			<version>0.2.3</version>
-		</dependency>
+            <groupId>org.eclipse.microprofile.jwt</groupId>
+            <artifactId>microprofile-jwt-auth-api</artifactId>
+        </dependency>
 
 		<dependency>
 			<groupId>javax.ws.rs</groupId>

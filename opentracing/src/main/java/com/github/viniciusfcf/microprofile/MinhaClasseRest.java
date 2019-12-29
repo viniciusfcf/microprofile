@@ -15,7 +15,7 @@ import org.eclipse.microprofile.opentracing.Traced;
  * NÃO é necessário a anotação @Traced em uma classe JAXRS.
  */
 @Traced(operationName = "${HTTP method}:${package name}.${class name}.${method name}", value = true)
-@Path("/endpoint...")
+@Path("/endpoint")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class MinhaClasseRest {

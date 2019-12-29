@@ -43,9 +43,8 @@
 	</properties>
 
 	<modules>
-		<!-- External projects -->
 		<module>opentracing</module>
-
+		<module>jwt</module>
 	</modules>
 
 	<repositories>
