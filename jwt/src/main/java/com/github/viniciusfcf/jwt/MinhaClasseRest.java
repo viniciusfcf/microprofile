@@ -19,9 +19,6 @@ import org.eclipse.microprofile.jwt.ClaimValue;
 import org.eclipse.microprofile.jwt.Claims;
 import org.eclipse.microprofile.jwt.JsonWebToken;
 
-/*
- * NÃO é necessário a anotação @Traced em uma classe JAXRS.
- */
 @Path("/endpoint")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
