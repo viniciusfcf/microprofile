@@ -24,6 +24,7 @@ import org.eclipse.microprofile.jwt.JsonWebToken;
 @Produces(MediaType.APPLICATION_JSON)
 public class MinhaClasseRest {
 
+	@SuppressWarnings("unused")
 	@Inject
 	private JsonWebToken jwt;
 
