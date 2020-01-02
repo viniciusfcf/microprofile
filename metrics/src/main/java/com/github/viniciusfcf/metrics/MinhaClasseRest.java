@@ -38,7 +38,7 @@ public class MinhaClasseRest {
 	/*
 	 * Armazena as métricas criadas e seus metadados baseado nos atributos name e absolute
 	 * São 3 tipos de métricas:
-	 * 1. application: criados pelo programador
+	 * 1. application: específicas da aplicação
 	 * 2. base: definidas na especificação de microprofile
 	 * 3. vendor:  específicas do fornecedor (implementação de microprofile) utilizado
 	 */
