@@ -46,6 +46,7 @@
 		<module>opentracing</module>
 		<module>jwt</module>
 		<module>metrics</module>
+		<module>health</module>
 	</modules>
 
 	<repositories>
