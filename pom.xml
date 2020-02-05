@@ -47,6 +47,7 @@
 		<module>jwt</module>
 		<module>metrics</module>
 		<module>health</module>
+		<module>config</module>
 	</modules>
 
 	<repositories>
