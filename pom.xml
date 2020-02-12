@@ -48,6 +48,7 @@
 		<module>metrics</module>
 		<module>health</module>
 		<module>config</module>
+		<module>rest-client</module>
 	</modules>
 
 	<repositories>
