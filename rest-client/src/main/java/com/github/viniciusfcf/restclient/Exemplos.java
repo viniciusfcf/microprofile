@@ -15,6 +15,7 @@ import org.eclipse.microprofile.rest.client.RestClientDefinitionException;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 @ApplicationScoped
+@SuppressWarnings("unused")
 public class Exemplos {
 
 	/*
