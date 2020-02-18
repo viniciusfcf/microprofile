@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.github.viniciusfcf.microprofile</groupId>
+		<artifactId>viniciusfcf-microprofile-parent</artifactId>
+		<version>999-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>viniciusfcf-fault-tolerance</artifactId>
+	<name>Microprofile - Fault Tolerance</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.eclipse.microprofile.fault-tolerance</groupId>
+            <artifactId>microprofile-fault-tolerance-api</artifactId>
+        </dependency>
+
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.enterprise/cdi-api -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.json</groupId>
+			<artifactId>javax.json-api</artifactId>
+		</dependency>
+
+
+	</dependencies>
+
+</project>
