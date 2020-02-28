@@ -50,6 +50,7 @@
 		<module>config</module>
 		<module>rest-client</module>
 		<module>faul-tolerance</module>
+		<module>openapi</module>
 	</modules>
 
 	<repositories>
