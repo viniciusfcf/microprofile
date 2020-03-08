@@ -20,6 +20,7 @@ import org.eclipse.microprofile.metrics.annotation.Gauge;
 import org.eclipse.microprofile.metrics.annotation.Metered;
 import org.eclipse.microprofile.metrics.annotation.Metric;
 import org.eclipse.microprofile.metrics.annotation.RegistryType;
+import org.eclipse.microprofile.metrics.annotation.SimplyTimed;
 import org.eclipse.microprofile.metrics.annotation.Timed;
 
 /**
@@ -115,6 +116,18 @@ public class MinhaClasseRest {
 			displayName = "Nome que será exibido", name = "Nome do @Metric", tags = {
 			"key=value" }, unit = MetricUnits.NONE)
 	
+	
+	/*
+	 * #MP-3.3 Criada na versão 3.3 de Microprofile
+	 * 
+	 * Nenhum dos atributos é obrigatório
+	 * Pode ser utilizado em: Método, Construtor e Classe
+	 * Alternativa mais leve à anotação {@link org.eclipse.microprofile.metrics.Timer timer} 
+	 */
+	@SimplyTimed(absolute = false, description = "Descrição desse @SimplyTimed", 
+			displayName = "Nome que será exibido", name = "Nome do @SimplyTimed", reusable = false, tags = {
+			"key=value" }, unit = MetricUnits.NANOSECONDS)
+	
 	@GET
 	public String hello() {
 		//Criando uma métrica manualmente
@@ -168,5 +181,5 @@ public class MinhaClasseRest {
 	public void init(@Metric(name="instances") Counter instances) {
 	    instances.inc();
 	}
-
+	
 }

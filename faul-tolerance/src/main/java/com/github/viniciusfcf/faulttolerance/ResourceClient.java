@@ -47,7 +47,11 @@ public class ResourceClient {
 
 	@Fallback(
 			value = MeuHandler.class,
-			fallbackMethod =  "nomeMetodo" // Ou declara value, ou o fallbackMethod
+			fallbackMethod =  "nomeMetodo", // Ou declara value, ou o fallbackMethod
+			
+			//#MP-3.3 Criados na versão 3.3 de Microprofile
+			applyOn = Throwable.class,
+			skipOn = Throwable.class
 	)
 	public void fallBack() {
 
@@ -70,7 +74,10 @@ public class ResourceClient {
 			requestVolumeThreshold = 20,//número de requisições consideradas para o failureRatio
 			failureRatio = .50,//limite de falha para abrir o circuito. Valor entre 0 e 1. 
 							   //Neste exemplo, 10 falhas das últimas 20 requisições, abre o circuito
-			successThreshold = 1//Quantidade de sucessos, depois do delay, para fechar o circuito novamente
+			successThreshold = 1,//Quantidade de sucessos, depois do delay, para fechar o circuito novamente
+			
+			//#MP-3.3 Criado na versão 3.3 de Microprofile
+			skipOn = Throwable.class
 			)
 	public void circuitBreaker() {
 		

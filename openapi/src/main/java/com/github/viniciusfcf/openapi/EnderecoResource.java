@@ -22,8 +22,10 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 public class EnderecoResource {
 
     @GET
-    @Operation(summary = "Busca todos os endereços do mundo todo", description =  "Descrição mais detalhada utilizando CommonMark syntax, com *Italic*, **Bold**, ![Image](http://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Mushroom-Super-icon.png)"+
-    "[Link](http://a.com)")
+    @Operation(summary = "Busca todos os endereços do mundo todo", 
+    	description =  "Descrição mais detalhada utilizando CommonMark syntax, com *Italic*, **Bold**,"
+    			+ " ![Image](http://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Mushroom-Super-icon.png)"+
+    		"[Link](http://a.com)")
     @APIResponse(responseCode = "200", content = @Content(schema = @Schema(type = SchemaType.ARRAY, implementation = EnderecoDTO.class)))
     public List<EnderecoDTO> buscarEnderecos() {
         return null;
